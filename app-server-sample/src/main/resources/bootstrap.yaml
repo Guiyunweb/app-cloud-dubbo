@@ -1,4 +1,6 @@
 dubbo:
+  scan:
+    base-packages: org.example.service.impl
   protocol:
     # dubbo 协议
     name: dubbo
