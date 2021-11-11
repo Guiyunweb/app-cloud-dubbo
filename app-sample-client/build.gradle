@@ -17,6 +17,8 @@ dependencies {
     implementation project(":app-sample-api")
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer:3.0.4'
     implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.4'
     implementation 'com.alibaba.cloud:spring-cloud-starter-dubbo:2021.1'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2021.1'

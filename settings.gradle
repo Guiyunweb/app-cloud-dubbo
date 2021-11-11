@@ -2,7 +2,7 @@ rootProject.name = 'app-cloud-dubbo'
 
 
 include 'app-sample-api'
-include 'app-server-sample' //服务提供方
-include 'app-client-sample'
+include 'app-sample-server' //服务提供方
+include 'app-sample-client'
 include 'app-gateway'
 

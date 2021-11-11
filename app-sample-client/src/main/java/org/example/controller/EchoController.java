@@ -19,4 +19,9 @@ public class EchoController {
         return echoService.echo(message);
     }
 
+    @GetMapping("*")
+    public String Not() {
+        return "404";
+    }
+
 }
