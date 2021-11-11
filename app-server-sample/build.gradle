@@ -1,0 +1,28 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'org.example'
+version 'unspecified'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation project(":app-sample-api")
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.4'
+    implementation 'org.apache.dubbo:dubbo-spring-boot-starter:2.7.14'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2021.1'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+
+test {
+    useJUnitPlatform()
+}

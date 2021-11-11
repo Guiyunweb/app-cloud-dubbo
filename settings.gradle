@@ -1,2 +1,6 @@
 rootProject.name = 'app-cloud-dubbo'
 
+
+include 'app-sample-api'
+include 'app-server-sample' //服务提供方
+
