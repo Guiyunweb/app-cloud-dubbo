@@ -1,7 +1,7 @@
-package org.example.controller;
+package org.example.client.controller;
 
 import org.apache.dubbo.config.annotation.DubboReference;
-import org.example.service.EchoService;
+import org.example.gateway.service.EchoService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

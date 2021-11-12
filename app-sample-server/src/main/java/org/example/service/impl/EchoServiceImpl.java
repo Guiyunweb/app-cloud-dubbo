@@ -3,7 +3,7 @@ package org.example.service.impl;
 
 import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
-import org.example.service.EchoService;
+import org.example.gateway.service.EchoService;
 
 /**
  * Created by myy on 2021/11/11.

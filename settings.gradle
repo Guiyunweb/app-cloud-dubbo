@@ -5,4 +5,5 @@ include 'app-sample-api'
 include 'app-sample-server' //服务提供方
 include 'app-sample-client'
 include 'app-gateway'
+include 'app-common'
 
