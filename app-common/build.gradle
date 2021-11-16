@@ -4,12 +4,14 @@ plugins {
 
 group 'org.example'
 version 'unspecified'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation 'com.google.code.gson:gson:2.8.9'
 }
 
 test {

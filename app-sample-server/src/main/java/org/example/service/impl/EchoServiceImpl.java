@@ -15,6 +15,6 @@ public class EchoServiceImpl implements EchoService {
 
     @Override
     public String echo(String message) {
-        return "[echo] Hello, " + message;
+        return "[echo2] Hello, " + message;
     }
 }

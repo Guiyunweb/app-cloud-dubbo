@@ -24,6 +24,7 @@ ext {
 }
 
 dependencies {
+    implementation project(":app-common")
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer:3.0.4'
     implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.4'
