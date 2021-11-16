@@ -1,0 +1,42 @@
+version: '2'
+services:
+  app-nacos:
+    image: nacos/nacos-server:2.0.3
+    environment:
+      MODE: standalone
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+    container_name: app-nacos
+    hostname: app-nacos
+
+  app-gateway:
+    build:
+      context: ./app-gateway
+    ports:
+      - "8000:8000"
+    container_name: app-gateway
+    hostname: app-gateway
+    image: app-gateway
+    depends_on:
+      - app-nacos
+
+  app-sample-server:
+    build:
+      context: ./app-sample-server
+    container_name: app-sample-server
+    hostname: app-sample-server
+    image: app-sample-server
+
+  app-sample-client:
+    build:
+      context: ./app-sample-client
+    ports:
+      - "8001:8001"
+    container_name: app-sample-client
+    hostname: app-sample-client
+    image: app-sample-client
+    depends_on:
+      - app-nacos
+      - app-sample-server
+

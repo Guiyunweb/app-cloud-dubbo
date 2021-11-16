@@ -13,7 +13,7 @@ dubbo:
 spring:
   application:
     # Dubbo 应用名称
-    name: app-server
+    name: app-sample-server
   main:
     # Spring Boot 2.1 需要设定
     allow-bean-definition-overriding: true
@@ -21,4 +21,4 @@ spring:
     nacos:
       # Nacos 服务发现与注册配置
       discovery:
-        server-addr: 47.100.105.136:8848
+        server-addr: app-nacos:8848

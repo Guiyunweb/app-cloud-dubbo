@@ -1,13 +1,13 @@
 dubbo:
   cloud:
-    subscribed-services: app-server
+    subscribed-services: app-sample-server
   protocols:
     dubbo:
       port: -1
 
 spring:
   application:
-    name: app-client
+    name: app-sample-client
   main:
     allow-bean-definition-overriding: true
   cloud:
@@ -15,7 +15,7 @@ spring:
       discovery:
         username: nacos
         password: nacos
-        server-addr: 47.100.105.136:8848
+        server-addr: app-nacos:8848
         namespace: public
 
 server:
