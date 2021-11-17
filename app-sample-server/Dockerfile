@@ -1,4 +1,4 @@
-FROM app-jdk
+FROM ibmjava:jre
 MAINTAINER i@guiyunweb.com
 # 添加docker-compose-wait插件
 ADD https://github.guiyun.plus/ufoscout/docker-compose-wait/releases/download/2.9.0/wait /wait
