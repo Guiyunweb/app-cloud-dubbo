@@ -7,9 +7,9 @@ spring:
           enabled: true
       routes:
         - id: app-client
-          uri: lb://app-client
+          uri: lb://app-sample-client
           predicates:
-            - Path=/app-client/**
+            - Path=/app-sample-client/**
           filters:
             - StripPrefix=1
         - id: guiyun

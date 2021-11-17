@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   app-nacos:
     image: nacos/nacos-server:2.0.3
@@ -18,8 +18,8 @@ services:
     container_name: app-gateway
     hostname: app-gateway
     image: app-gateway
-    depends_on:
-      - app-nacos
+    environment:
+      WAIT_HOSTS: app-nacos:8848
 
   app-sample-server:
     build:
@@ -27,16 +27,14 @@ services:
     container_name: app-sample-server
     hostname: app-sample-server
     image: app-sample-server
+    environment:
+      WAIT_HOSTS: app-nacos:8848
 
   app-sample-client:
     build:
       context: ./app-sample-client
-    ports:
-      - "8001:8001"
     container_name: app-sample-client
     hostname: app-sample-client
     image: app-sample-client
-    depends_on:
-      - app-nacos
-      - app-sample-server
-
+    environment:
+      WAIT_HOSTS: app-nacos:8848,app-sample-server:20880
