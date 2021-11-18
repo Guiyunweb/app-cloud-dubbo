@@ -1,9 +1,7 @@
 version: '3'
 services:
   app-nacos:
-    image: nacos/nacos-server:2.0.3
-    environment:
-      MODE: standalone
+    image: ccr.ccs.tencentyun.com/guiyunweb/nacos-standalone:2.0.3
     ports:
       - "8848:8848"
       - "9848:9848"
