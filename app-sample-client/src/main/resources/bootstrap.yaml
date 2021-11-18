@@ -16,7 +16,7 @@ spring:
         username: nacos
         password: nacos
         server-addr: app-nacos:8848
-        namespace: public
+        namespace: app-cloud-dubbo
 
 server:
   port: 8001

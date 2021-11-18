@@ -9,3 +9,5 @@ spring:
   cloud:
     nacos:
       server-addr: app-nacos:8848
+      discovery:
+        namespace: app-cloud-dubbo

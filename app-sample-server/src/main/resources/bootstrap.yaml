@@ -21,3 +21,4 @@ spring:
       # Nacos 服务发现与注册配置
       discovery:
         server-addr: app-nacos:8848
+        namespace: app-cloud-dubbo

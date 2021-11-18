@@ -18,6 +18,7 @@ services:
     image: app-gateway
     environment:
       WAIT_HOSTS: app-nacos:8848
+      WAIT_TIMEOUT: 120
 
   app-sample-server:
     build:
@@ -27,6 +28,7 @@ services:
     image: app-sample-server
     environment:
       WAIT_HOSTS: app-nacos:8848
+      WAIT_TIMEOUT: 120
 
   app-sample-client:
     build:
@@ -36,3 +38,4 @@ services:
     image: app-sample-client
     environment:
       WAIT_HOSTS: app-nacos:8848,app-sample-server:20880
+      WAIT_TIMEOUT: 18s0
